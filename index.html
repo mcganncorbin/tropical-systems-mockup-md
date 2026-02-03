@@ -1,0 +1,195 @@
+<section id="ts-hurricane" aria-label="Tropical Systems - Hurricane risk summary">
+  <style>
+    /* Scoped styles (won't affect rest of Hub site) */
+    #ts-hurricane{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#1f2937;}
+    #ts-hurricane .wrap{max-width:1100px;margin:0 auto;padding:22px 16px 48px;}
+    #ts-hurricane .hero{
+      border:1px solid rgba(15,23,42,.12);
+      border-radius:18px;
+      padding:22px 22px 16px;
+      background:linear-gradient(180deg, rgba(220,38,38,.06), rgba(255,255,255,0));
+    }
+    #ts-hurricane h1{margin:0 0 8px;font-size:34px;letter-spacing:-.02em;line-height:1.15;}
+    #ts-hurricane .lede{margin:0;max-width:80ch;line-height:1.65;color:rgba(31,41,55,.85);}
+    #ts-hurricane .pillbar{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+    #ts-hurricane .pill{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:10px 12px;border-radius:999px;
+      border:1px solid rgba(15,23,42,.12);
+      background:rgba(255,255,255,.75);
+      text-decoration:none;color:inherit;font-size:14px;
+    }
+
+    #ts-hurricane .section{margin-top:16px;}
+    #ts-hurricane .grid{display:grid;gap:14px;}
+    @media (min-width: 860px){
+      #ts-hurricane .grid.cols-3{grid-template-columns:repeat(3,1fr);}
+      #ts-hurricane .grid.cols-2{grid-template-columns:1.2fr .8fr;}
+    }
+
+    #ts-hurricane .card{
+      border:1px solid rgba(15,23,42,.10);
+      background:rgba(255,255,255,.85);
+      border-radius:16px;
+      padding:16px 16px 14px;
+      box-shadow:0 10px 22px rgba(15,23,42,.06);
+    }
+    #ts-hurricane .kicker{margin:0 0 6px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:rgba(31,41,55,.65);}
+    #ts-hurricane h2{margin:0 0 10px;font-size:20px;letter-spacing:-.01em;}
+    #ts-hurricane p{margin:0 0 10px;line-height:1.65;color:rgba(31,41,55,.88);}
+    #ts-hurricane ul{margin:8px 0 0 18px;line-height:1.6;}
+    #ts-hurricane .tag{
+      display:inline-block;
+      padding:6px 10px;border-radius:999px;
+      border:1px solid rgba(15,23,42,.12);
+      background:rgba(15,23,42,.04);
+      font-size:13px;font-weight:600;
+    }
+
+    /* Simple “risk tier” accent bars */
+    #ts-hurricane .tier{padding-top:14px;position:relative;}
+    #ts-hurricane .tier::before{
+      content:"";position:absolute;left:0;top:0;height:5px;width:100%;
+      border-radius:16px 16px 0 0;background:rgba(15,23,42,.12);
+    }
+    #ts-hurricane .tier.high::before{background:rgba(220,38,38,.75);}      /* red */
+    #ts-hurricane .tier.mod::before{background:rgba(249,115,22,.75);}       /* orange */
+    #ts-hurricane .tier.low::before{background:rgba(234,179,8,.75);}        /* amber */
+
+    /* Figure */
+    #ts-hurricane figure{margin:0;}
+    #ts-hurricane .imgbox{
+      border:1px solid rgba(15,23,42,.10);
+      background:rgba(255,255,255,.85);
+      border-radius:16px;
+      padding:12px;
+      box-shadow:0 10px 22px rgba(15,23,42,.06);
+    }
+    #ts-hurricane img{width:100%;height:auto;border-radius:12px;display:block;}
+    #ts-hurricane figcaption{margin-top:10px;font-size:13px;line-height:1.5;color:rgba(31,41,55,.72);}
+
+    /* Accordion */
+    #ts-hurricane details{
+      border:1px solid rgba(15,23,42,.10);
+      border-radius:16px;
+      padding:12px 14px;
+      background:rgba(255,255,255,.85);
+    }
+    #ts-hurricane summary{cursor:pointer;font-weight:700;}
+    #ts-hurricane summary::-webkit-details-marker{display:none;}
+    #ts-hurricane .muted{color:rgba(31,41,55,.72);}
+  </style>
+
+  <div class="wrap">
+
+    <!-- HERO -->
+    <div class="hero">
+      <p class="kicker">Tropical Systems</p>
+      <h1>Hurricane Risk Across Maryland</h1>
+      <p class="lede">
+        Maryland’s hurricane risk is driven by a mix of population density, exposed infrastructure, property values, and
+        recurring impacts from tropical storms and hurricane remnants. The map and summaries below highlight where risk
+        concentrates and why.
+      </p>
+
+      <div class="pillbar" aria-label="Jump links">
+        <a class="pill" href="#ts-risk-tiers">Risk tiers</a>
+        <a class="pill" href="#ts-map">Risk map</a>
+        <a class="pill" href="#ts-full-text">Full narrative</a>
+      </div>
+    </div>
+
+    <!-- RISK TIERS -->
+    <div id="ts-risk-tiers" class="section grid cols-3" aria-label="Hurricane risk tiers">
+      <div class="card tier high">
+        <p class="kicker">Relatively High</p>
+        <h2>Highest concentration of exposure</h2>
+        <p><span class="tag">Key drivers:</span> population density, infrastructure exposure, higher property values, and historical storm impacts.</p>
+        <ul>
+          <li><strong>:contentReference[oaicite:0]{index=0}</strong></li>
+          <li><strong>:contentReference[oaicite:1]{index=1}</strong></li>
+          <li><strong>:contentReference[oaicite:2]{index=2}</strong></li>
+        </ul>
+      </div>
+
+      <div class="card tier mod">
+        <p class="kicker">Relatively Moderate</p>
+        <h2>Recurring tropical storm impacts</h2>
+        <p>
+          Although less urbanized than central counties, these areas can experience strong tropical storms that bring
+          significant rainfall and moderate wind damage, affecting people, homes, and businesses.
+        </p>
+        <ul>
+          <li><strong>:contentReference[oaicite:3]{index=3}</strong></li>
+          <li><strong>:contentReference[oaicite:4]{index=4}</strong></li>
+          <li><strong>:contentReference[oaicite:5]{index=5}</strong></li>
+          <li><strong>:contentReference[oaicite:6]{index=6}</strong></li>
+          <li><strong>:contentReference[oaicite:7]{index=7}</strong></li>
+          <li><strong>:contentReference[oaicite:8]{index=8}</strong></li>
+          <li><strong>:contentReference[oaicite:9]{index=9}</strong></li>
+          <li><strong>:contentReference[oaicite:10]{index=10}</strong></li>
+          <li><strong>:contentReference[oaicite:11]{index=11}</strong></li>
+          <li><strong>:contentReference[oaicite:12]{index=12}</strong></li>
+          <li><strong>:contentReference[oaicite:13]{index=13}</strong></li>
+          <li><strong>:contentReference[oaicite:14]{index=14}</strong></li>
+        </ul>
+      </div>
+
+      <div class="card tier low">
+        <p class="kicker">Relatively Low to Very Low</p>
+        <h2>Weakened intensity over land</h2>
+        <p>
+          As tropical systems move inland, storm intensity typically weakens. Remnants may still produce heavy rain or
+          isolated wind damage, but frequency and economic impacts are generally lower due to reduced exposure.
+        </p>
+        <p class="muted" style="margin:0;">
+          (If you want, we can add the specific counties that fall into low/very low once you confirm them.)
+        </p>
+      </div>
+    </div>
+
+    <!-- MAP -->
+    <div id="ts-map" class="section grid cols-2" aria-label="Hurricane risk map">
+      <div class="imgbox">
+        <figure>
+          <img
+            src="PASTE_IMAGE_URL_HERE"
+            alt="Map of Maryland showing hurricane risk ratings by county: relatively high, relatively moderate, relatively low, and very low."
+            loading="lazy"
+          />
+          <figcaption>
+            Hurricane risk rating by county in :contentReference[oaicite:15]{index=15}. Use this map as a quick visual reference, then expand the narrative below for context.
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="card">
+        <p class="kicker">How to read this</p>
+        <h2>What the map is communicating</h2>
+        <ul>
+          <li><strong>High:</strong> more people and higher-value assets exposed, plus a history of impacts.</li>
+          <li><strong>Moderate:</strong> recurring rainfall/wind impacts from tropical storms and remnants.</li>
+          <li><strong>Low/Very Low:</strong> storms often weaken inland; impacts tend to be more isolated.</li>
+        </ul>
+        <p class="muted" style="margin-top:10px;">
+          Optional improvement: we can add 2–3 “Key takeaways” bullets above the map for even faster scanning.
+        </p>
+      </div>
+    </div>
+
+    <!-- FULL NARRATIVE (keeps your original text intact) -->
+    <div id="ts-full-text" class="section" aria-label="Full narrative">
+      <details>
+        <summary>Read the full narrative text (for reports and technical detail)</summary>
+        <div style="margin-top:10px;">
+          <p><strong>Hurricane:</strong> The risk rating for Baltimore, Montgomery, and Prince George’s Counties is relatively high for hurricanes. This is due to a combination of high population density and infrastructure exposure, high property values, and historical exposure to remnants of tropical storms and hurricanes.</p>
+
+          <p>Moderate risk areas include Harford, Baltimore City, Howard, Anne Arundel, Charles, St. Mary’s, Caroline, Talbot, Dorchester, Somerset, Wicomico, and Worcester. Although less urbanized than central counties, these areas face recurring exposure from strong tropical storms that can produce significant rainfall and moderate wind damage. These counties also tend to have a substantial number of people, homes, and businesses in areas exposed to hurricane impacts.</p>
+
+          <p>The relatively low and low risk areas experience weakened storm intensity as tropical systems lose strength over land. While remnants of hurricanes may bring heavy rain or isolated wind damage, the frequency and economic impact remain minimal compared to central and southern Maryland. Therefore, due to lower exposure, fewer structures, and weaker storm intensity by the time hurricanes reach these regions, they have relatively low to very low risk rating.</p>
+        </div>
+      </details>
+    </div>
+
+  </div>
+</section>
